@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contenido-menu {
+    background-image: url('../img/cafe.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    aspect-ratio: 3 / 5;
+
+    @include m.telefono { 
+          aspect-ratio: 4 / 5;
+    }
+    @include m.tablet {  
+        @include m.grid(2, v.$separacion);
+        background-size: 50%;
+        aspect-ratio: 16 / 7;
+        background-position: bottom right;
+    }
+}

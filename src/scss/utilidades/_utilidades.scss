@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.text-center {
+    text-align: center;
+}
+.bg-primario {
+    background-color: v.$primario ;
+}
+.bg-blanco {
+    background-color: v.$blanco;
+}
+.margin-negativo {
+    margin-top: -5rem;
+    @include m.desktop { 
+          margin-top: -10rem;
+    }
+}
+.padding-top-0 {
+    padding-top: 0;
+}
+.padding-bottom-0 {
+    padding-bottom: 0;
+}
